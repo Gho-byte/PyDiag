@@ -40,6 +40,7 @@ class App:
                     }
                 case 2:
                     App.dec_sort(list(self.students.items()))
+        print('Au Revoir !')
                     
 
     @staticmethod
