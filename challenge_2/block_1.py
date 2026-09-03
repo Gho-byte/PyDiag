@@ -68,6 +68,6 @@ def comprehension(notes):
     print(output_list)
 
 liste_a = [1, 4, 7]
-liste_b = [2, 3, 8, 9]
+liste_b = [2, 3, 8, 0]
 
 fusion_lists(liste_a, liste_b)
