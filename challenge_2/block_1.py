@@ -38,10 +38,16 @@ def reverse_list(input_list):
         print('[-] Please provide a list')
 
 def fusion_lists(list_one, list_two):
-    output = {}
+    output = set()
     min = len(list_one)
-    list_two_len = len(list_two)
-    if list_two_len < min: min = list_two_len
+    list_one_is_small = True
+    max = len(list_two)
+    if max < min:
+        tmp = min
+        min = max
+        max = min
+        list_one_is_small = False
+    rest = max - min
     for i in range(min):
         if list_one[i] < list_two[i]:
             output.add(list_one[i]) ; output.add(list_two[i])
@@ -49,6 +55,9 @@ def fusion_lists(list_one, list_two):
             output.add(list_two[i]) ; output.add(list_one[i])
         else:
             output.add(list_two[i])
+    big_list = list_two if list_one_is_small else list_one
+    for i in range(min, max):
+        output.add(big_list[i])
     print(list(output))
 
 def comprehension(notes):
@@ -57,3 +66,8 @@ def comprehension(notes):
         if note % 2 == 0:
             output_list.append(note*note)
     print(output_list)
+
+liste_a = [1, 4, 7]
+liste_b = [2, 3, 8, 9]
+
+fusion_lists(liste_a, liste_b)
