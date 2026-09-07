@@ -40,10 +40,6 @@ def mini_challenge(studnets_data):
     materials = set()
     materials_data = [] # name, note, how much duplicated
     for student in studnets_data:
-    #     try:
-    #         existIn = names.index(student['nom'])
-    #         notes[existIn] = (notes[existIn] + notes[existIn]) / how_much_material[existIn]
-    #     except ValueError:
         names.append(student['nom'])
         materials_notes_sum = 0
         for material_name in student['matieres']:
@@ -78,7 +74,7 @@ def mini_challenge(studnets_data):
     print(f'[+] Meilleure matiere (moyenne globale) : {best_material[0]} ({best_material[1]:.2f})')
 
 mini_challenge([
-{"nom": "Ali", "matieres": {"maths": 14, "physique": 12}},
-{"nom": "Sara", "matieres": {"maths": 18, "physique": 16, "svt": 15}},
-{"nom": "Lina", "matieres": {"maths": 9, "physique": 11}},
+    {"nom": "Ali", "matieres": {"maths": 14, "physique": 12}},
+    {"nom": "Sara", "matieres": {"maths": 18, "physique": 16, "svt": 15}},
+    {"nom": "Lina", "matieres": {"maths": 9, "physique": 11}},
 ])
