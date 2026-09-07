@@ -29,3 +29,13 @@ def traiter_valeur(number):
         print(f'[-] Erreur : "{number}"' + "n’est pas un entier valide.")
     finally:
         print('Traitement termine.')
+
+# def test(string):
+#     if string: return string
+#     raise ValueError('')
+
+
+# try:
+#     test('')
+# except ValueError:
+#     print('string is empty')
