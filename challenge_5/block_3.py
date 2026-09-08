@@ -25,6 +25,9 @@ class Voiture(Vehicule):
     def daily_price(self, base_price):
         return base_price + self.places_number
 
+    def __str__(self):
+        print(f'[+] Voiture {self.marque} -> ({self.__immatriculation}) -- {self.places_number} places -- {self.daily_price(40)}/jour')
+
 class Moto(Vehicule):
     def __init__(self, cylinders=6, marque='', immatriculation=''):
         super().__init__(marque, immatriculation)
@@ -36,6 +39,9 @@ class Moto(Vehicule):
 
     def daily_price(self, base_price):
         return base_price + self.cylinders
+
+    def __str__(self):
+        print(f'[+] Moto {self.marque} -> ({self.__immatriculation}) -- {self.cylinders} cylindree -- {self.daily_price(40)}/jour')
         
 class Camion(Vehicule):
     def __init__(self, kg_weights=100, marque='', immatriculation=''):
@@ -48,3 +54,6 @@ class Camion(Vehicule):
 
     def daily_price(self, base_price):
         return base_price + self.kg_weights
+
+    def __str__(self):
+        print(f'[+] Camion {self.marque} -> ({self.__immatriculation}) -- {self.kg_weights} KG -- {self.daily_price(40)}/jour')
